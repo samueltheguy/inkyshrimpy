@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css?family=Comfortaa');
+
+@keyframes fadein {
+    0%{opacity:0;}
+
+    100%{opacity:1;}
+}
+
+body {
+    margin-top:20px;
+    margin-bottom:20px;
+    font-family:Comfortaa;
+    animation:fadein 1.5s;
+}
+
+#homeLink{animation:fadein .5s;}
+#aboutLink{animation:fadein 1s;}
+#donateLink{animation:fadein 1.5s;}
+#contactLink{animation:fadein 2s;}
+
+a {
+    position: fixed;
+	top: 0;
+	
+	text-decoration: none;
+    color: black;
+    font-size:34px;
+    transition-duration: 0.1s;
+}
+a:hover{
+    text-decoration: none;
+    color: rgb(207, 90, 90);
+    transition-duration: 0.1s;
+}
+
+#banner{
+    margin-bottom:0px;
+    margin-top:0px;
+	position: fixed;
+
+}
+
+#about{
+    border-top:solid 3px rgb(153, 104, 245);
+    padding-top:120px;
+    padding-bottom:120px;
+    border-bottom:solid 3px rgb(180, 212, 207);
+    font-size:30px;
+    
+    
+}
+#about span{
+    width:40%;
+}
+
+#gallery{
+    margin-top:200px;
+    padding-bottom:200px;
+    border-bottom:solid 3px rgb(46, 202, 80);
+}
+
+
+
+.overlay{
+    position:absolute;
+    opacity: 0;
+    top:0;
+    bottom:0;
+    left:0;
+    transition:.5s;
+    background-color:rgba(180, 212, 207, 0.623);
+    border-radius: 30px;
+    height:100%;
+    width:100%;
+}
+.overlaytext{
+    position: absolute;
+    top:30%;
+    left:50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color:white;
+    font-size:40px;
+}
+
+.col-md-4:hover .overlay{
+    opacity:1;
+}
+
+.col-md-4{
+    -webkit-backface-visibility: hidden;
+    -webkit-transform: translateZ(0) scale(1.0, 1.0);
+    transform: translateZ(0);
+}
+.col-md-4:hover #galleryimg{
+    filter: blur(5px);
+    transition:.5s ease;
+    
+}
+
+.overlay #insta {
+    top:30%;
+    left:50%;
+    -webkit-transform: translate(-50%, +100%);
+    -ms-transform: translate(-50%, +100%);
+    transform: translate(-50%, +100%);
+    position:absolute;
+    transition:.3s ease;
+}
+
+#insta:hover{
+    filter: opacity(.5) drop-shadow(0 0 0 red);
+    transition:.3s ease;
+}
